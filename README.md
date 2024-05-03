@@ -1,12 +1,12 @@
 # Synergy Link : A website built using MERN
 ### Tech Stack Used
-> MongoDB
-> Expressjs
-> React
-> Vite
-> Nodejs
-> Tailwindcss
-> cors, bcrypt, mongoose, dotenv, jwt, etc
+> MongoDB.
+> Expressjs.
+> React.
+> Vite.
+> Nodejs.
+> Tailwindcss.
+> cors, bcrypt, mongoose, dotenv, jwt, etc.
 
 <img src="https://i.ibb.co/PrCwdHn/Screenshot-2024-05-03-140436.png" alt="Screenshot-2024-05-03-140436" border="0">
 
