@@ -1,4 +1,8 @@
 # Synergy Link : A website built using MERN
+<h3><em>Synergy Link is a chat platform that goes beyond random connections. Our platform uses the MBTI personality assessment and goal setting tools to connect you with individuals who share your personality type and aspirations, fostering friendships, collaborations, and a supportive network. </em></h3>
+
+<br>
+
 ### Tech Stack Used
 > MongoDB.
 > Expressjs.
