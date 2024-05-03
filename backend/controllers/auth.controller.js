@@ -4,7 +4,7 @@ import generateTokenAndSetCookie from "../utils/generateToken.js";
 
 export const signup = async (req, res) => {
 	try {
-		const { fullName, username, password, confirmPassword, gender } = req.body;
+		const { fullName, username, password, confirmPassword, gender, personalityType, position } = req.body;
 
 		if (password !== confirmPassword) {
 			return res.status(400).json({ error: "Passwords don't match" });
@@ -31,6 +31,8 @@ export const signup = async (req, res) => {
 			password: hashedPassword,
 			gender,
 			profilePic: gender === "male" ? boyProfilePic : girlProfilePic,
+			personalityType,
+			position,
 		});
 
 		if (newUser) {
@@ -43,6 +45,8 @@ export const signup = async (req, res) => {
 				fullName: newUser.fullName,
 				username: newUser.username,
 				profilePic: newUser.profilePic,
+				personalityType: newUser.personalityType,
+				position: newUser.position,
 			});
 		} else {
 			res.status(400).json({ error: "Invalid user data" });
@@ -70,6 +74,8 @@ export const login = async (req, res) => {
 			fullName: user.fullName,
 			username: user.username,
 			profilePic: user.profilePic,
+			personalityType: user.personalityType,
+			position: user.position,
 		});
 	} catch (error) {
 		console.log("Error in login controller", error.message);

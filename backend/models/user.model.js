@@ -27,15 +27,11 @@ const userSchema = new mongoose.Schema(
 		},
 		personalityType: {
 			type: String,
-			default: "Normal",
+			default: "",
 		},
 		position: {
 			type: String,
-			default: "Student",
-		},
-		bio: {
-			type: String,
-			default: "I'm a kind person",
+			default: "",
 		},
 		// createdAt, updatedAt => Member since <createdAt>
 	},

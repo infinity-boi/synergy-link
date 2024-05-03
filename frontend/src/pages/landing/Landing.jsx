@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing.css";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
+import BgVideo from "./landing.mp4";
+import member1 from "./ceo.jpg"
 
 const Landing = () => {
   return (
@@ -15,19 +17,19 @@ const Landing = () => {
         <nav className="nav">
           <ul>
             <li>
-              <Link to="#synergy">Home</Link>
+              <a href="#synergy">Home</a>
             </li>
             <li>
-              <Link to="#about">About</Link>
+              <a href="#about">About</a>
             </li>
             <li>
-              <Link to="#howitworks">How it Works</Link>
+              <a href="#howitworks">How it Works</a>
             </li>
           </ul>
         </nav>
         <div>
           <Link className="link-class" to="/login">
-            <a href="/login" id="login-button" className="button">
+            <a href="/login" id="login-button" className="button secondary">
               Log in
             </a>
           </Link>
@@ -38,9 +40,13 @@ const Landing = () => {
           </Link>
         </div>
       </header>
+      
       <div className="content" id="app-content">
+      <video autoPlay loop muted id="video">
+        <source src={BgVideo} type="video/mp4"/>
+      </video>
         <section id="synergy" className="synergy">
-          <div className="hero-content">
+          <div className="  hero-content">
             <h1>
               Synergy Link: Connecting Personalities for Meaningful
               Conversations
@@ -55,16 +61,15 @@ const Landing = () => {
               <li>Build a Supportive Network</li>
             </ul>
             <div className="cta">
-              <a href="" className="button primary">
-                Join Now for Free
+            <Link className="link-class" to="/signup">
+              <a href="/signup" className="button primary">
+                Join Now for Free 
               </a>
-              <a href="" className="button secondary">
-                Learn More
-              </a>
+            </Link>
             </div>
           </div>
         </section>
-        <section synergy="about" className="about">
+        <section id="about" className="about">
           <div className="hero-content">
             <h1>About Synergy Link</h1>
             <p>
@@ -87,12 +92,12 @@ const Landing = () => {
           <div className="team-members">
             {/* Add team member profiles here (repeat for each member) */}
             <div className="team-member">
-              <img src="team-member-1.jpg" alt="Team Member 1" />
+              <img src={member1} alt="Team Member 1" />
               <h3>Gourav Singh</h3>
               <p>Founder & CEO</p>
             </div>
             <div className="team-member">
-              <img src="team-member-2.jpg" alt="Team Member 2" />
+              <img src={member1} alt="Team Member 2" />
               <h3>Gourav Singh</h3>
               <p>CTO</p>
             </div>

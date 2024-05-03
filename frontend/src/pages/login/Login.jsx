@@ -16,6 +16,7 @@ const Login = () => {
 
 	return (
 		<div className='login-page'>
+			<div className="login-container">
 			<div className='login-left'>
 				<h1 className='text-3xl font-semibold text-center text-gray-600'>
 					Login
@@ -48,9 +49,6 @@ const Login = () => {
 							onChange={(e) => setPassword(e.target.value)}
 						/>
 					</div>
-					<Link to='/signup' className='text-sm  hover:underline hover:text-blue-600 mt-2 inline-block'>
-						{"Don't"} have an account?
-					</Link>
 
 					<div>
 						<button className='white-btn' disabled={loading}>
@@ -58,6 +56,12 @@ const Login = () => {
 						</button>
 					</div>
 				</form>
+			</div>
+			<div className="login-right">
+            <Link to='/signup' className='text-sm text-white hover:underline hover:text-blue-600 hover:bg-white mt-2 inline-block'>
+						{"Don't"} have an account?
+			</Link>
+        </div>
 			</div>
 		</div>
 	);
