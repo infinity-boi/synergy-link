@@ -8,6 +8,8 @@
 - Tailwindcss
 - cors, bcrypt, mongoose, dotenv, jwt, etc
 
+  [!(https://postimg.cc/NyhPx863)]
+
 ### How to Run this Project
 - Install all the dependencies : npm install
 - Configure the backend: change the DB_URL, secret_key from .env and connectToDB file
