@@ -8,7 +8,7 @@
 - Tailwindcss
 - cors, bcrypt, mongoose, dotenv, jwt, etc
 
-  [!(https://postimg.cc/NyhPx863)]
+<img src="https://postimg.cc/NyhPx863"/>
 
 ### How to Run this Project
 - Install all the dependencies : npm install
