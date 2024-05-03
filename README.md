@@ -1,5 +1,5 @@
-### Synergy Link : A website built using MERN
-## Tech Stack Used
+# Synergy Link : A website built using MERN
+### Tech Stack Used
 - MongoDB
 - Expressjs
 - React
@@ -8,7 +8,7 @@
 - Tailwindcss
 - cors, bcrypt, mongoose, dotenv, jwt, etc
 
-## How to Run this Project
+### How to Run this Project
 - Install all the dependencies : npm install
 - Configure the backend: change the DB_URL, secret_key from .env and connectToDB file
 - Build the project : npm run build --prefix frontend
