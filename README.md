@@ -1,37 +1,26 @@
-# MERN Stack Project: Build and Deploy a Real Time Chat App | JWT, Socket.io
+# Synergy Link : A website built using MERN
+<h3><em>Synergy Link is a chat platform that goes beyond random connections. Our platform uses the MBTI personality assessment and goal setting tools to connect you with individuals who share your personality type and aspirations, fostering friendships, collaborations, and a supportive network. </em></h3>
 
-![Demo App](https://i.ibb.co/gFSMzKN/1.png)
+<br>
 
-[Video Tutorial on Youtube](https://youtu.be/HwCqsOis894)
+### Tech Stack Used
+> MongoDB.
+> Expressjs.
+> React.
+> Vite.
+> Nodejs.
+> Tailwindcss.
+> cors, bcrypt, mongoose, dotenv, jwt, etc.
 
-Some Features:
+<img src="https://i.ibb.co/PrCwdHn/Screenshot-2024-05-03-140436.png" alt="Screenshot-2024-05-03-140436" border="0">
 
--   🌟 Tech stack: MERN + Socket.io + TailwindCSS + Daisy UI
--   🎃 Authentication && Authorization with JWT
--   👾 Real-time messaging with Socket.io
--   🚀 Online user status (Socket.io and React Context)
--   👌 Global state management with Zustand
--   🐞 Error handling both on the server and on the client
--   ⭐ At the end Deployment like a pro for FREE!
--   ⏳ And much more!
+<img src="https://i.ibb.co/1TBZVkp/Screenshot-2024-05-03-140721.png" alt="Screenshot-2024-05-03-140721" border="0">
 
-### Setup .env file
+### How to Run this Project
+- Install all the dependencies : npm install
+- Configure the backend: change the DB_URL, secret_key from .env and connectToDB file
+- Build the project : npm run build --prefix frontend
+- Run the server : @synergy-link > node backend/server.js
+- Run the client : @synergy-link/frontend > npm run dev
+- Yo! You are good to go
 
-```js
-PORT=...
-MONGO_DB_URI=...
-JWT_SECRET=...
-NODE_ENV=...
-```
-
-### Build the app
-
-```shell
-npm run build
-```
-
-### Start the app
-
-```shell
-npm start
-```
