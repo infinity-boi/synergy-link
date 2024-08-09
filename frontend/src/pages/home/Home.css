@@ -19,3 +19,16 @@
   .btn-upper-corner:hover {
     background-color: #444; /* Change background color on hover (optional) */
   }
+
+@media screen and (max-width:800px){
+  .main {
+    display: block;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:800px){
+  .main{
+    height: 550px;
+  }
+}

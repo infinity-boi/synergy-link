@@ -15,12 +15,12 @@ const Login = () => {
 	};
 
 	return (
-		<div className='login-page'>
+		<div className='login-page m-0'>
 			<div className="login-container">
 			<div className='login-left'>
-				<h1 className='text-3xl font-semibold text-center text-gray-600'>
+				<h1 className='text-3xl font-bold text-center text-gray-600'>
 					Login
-					<span className='text-blue-500'> Synergy Link</span>
+					<span className='text-blue-500 hover:text-green-700'> Synergy Link</span>
 				</h1>
 
 				<form className="form-container" onSubmit={handleSubmit}>
@@ -51,14 +51,14 @@ const Login = () => {
 					</div>
 
 					<div>
-						<button className='white-btn' disabled={loading}>
+						<button className='white-btn hover:bg-green-700' disabled={loading}>
 							{loading ? <span className='loading loading-spinner '></span> : "Login"}
 						</button>
 					</div>
 				</form>
 			</div>
 			<div className="login-right">
-            <Link to='/signup' className='text-sm text-white hover:underline hover:text-blue-600 hover:bg-white mt-2 inline-block'>
+            <Link to='/signup' className='text-sm text-white hover:underline hover:text-blue-600 mt-2 inline-block'>
 						{"Don't"} have an account?
 			</Link>
         </div>

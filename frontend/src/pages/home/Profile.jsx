@@ -3,7 +3,7 @@ import { useAuthContext } from "../../context/AuthContext";
 
 const Profile = () => {
     const { authUser } =  useAuthContext();
-    console.log(authUser._createdAt);
+    console.log(authUser.createdAt);
     console.log(authUser.username);
     console.log(authUser.password);
     console.log(authUser.position);
@@ -25,20 +25,27 @@ const Profile = () => {
             {authUser.fullName}
           </h1>
           <h3 className="font-lg text-semibold text-center leading-6 text-gray-600">
-            Student{authUser.position}
+            {authUser.position}
           </h3>
           <ul className="mt-3 divide-y rounded bg-gray-100 py-2 px-3 text-gray-600 shadow-sm hover:text-gray-700 hover:shadow">
             <li className="flex items-center py-3 text-sm">
               <span>Personality Type</span>
               <span className="ml-auto">
                 <span className="rounded-full bg-blue-200 py-1 px-2 text-xs font-medium text-blue-700">
-                  INTJ{authUser.personalityType}
+                  {authUser.personalityType}
                 </span>
               </span>
             </li>
             <li className="flex items-center py-3 text-sm">
-              <span>Joined On</span>
-              <span className="ml-auto"> {authUser.createdAt}</span>
+              <span>Joined On &nbsp;</span>
+              
+              <span className="ml-auto">
+                 {new Date(authUser.createdAt).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+              </span>
             </li>
           </ul>
         </div>
