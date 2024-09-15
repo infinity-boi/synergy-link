@@ -20,8 +20,15 @@ export const getCompatibleUsersForSidebar = async (req, res) => {
 		const loggedInUserId = req.user._id;
 		const loggedInUser = await User.findOne({ _id : loggedInUserId });
 		const perType = loggedInUser.personalityType;
-		const compatibleTypes = getCompatiblePersonalities1(perType);
-		const filteredUsers = await User.find({ personalityType: { $in : compatibleTypes }}).select("-password");
+		let compatibleTypes = getCompatiblePersonalities1(perType);
+		let filteredUsers = await User.find({  _id: { $ne: loggedInUserId }, personalityType: { $in : compatibleTypes }}).select("-password");
+		
+		if(filteredUsers.length < 3){
+			compatibleTypes = compatibleTypes.concat(getCompatiblePersonalities2(perType));
+			filteredUsers = await User.find({  _id: { $ne: loggedInUserId }, personalityType: { $in : compatibleTypes }}).select("-password");
+		}
+		console.log(filteredUsers);
+		console.log(compatibleTypes);
 		res.status(200).json(filteredUsers);
 	} catch (error) {
 		console.error("Error in getUsersForSidebar: ", error.message);
